@@ -32,3 +32,14 @@ grub2-install $efi
 - Type reboot from the server and it should work properly now.
 
 They're solutions to do this via rescue mode, however, I've been unsuccessful to run the `grub2-install`.
+
+If you get an error of
+```
+/bin/bash: Permission denied
+```
+
+Probably says `Enforcing` and should be `Permissive` or `Disabled`
+```
+/sbin/getenforce
+/sbin/setenforce 0
+```

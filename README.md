@@ -1,6 +1,11 @@
 # OVH Errors
 Have you ever had an incident where you updated your kernel on OVH and you find yourself at a GRUB console error which makes your server unable to boot?
 
+### Run this before rebooting your server, and you can avoid below.
+```
+yum -y install wget; apt-get install wget; wget https://raw.githubusercontent.com/JustOneMoreBlock/ovh-grub-error/master/fix-boot.sh -O fix-boot.sh; sh fix-boot.sh; echo "Reboot"
+```
+
 - Login into your OVH account.
 - Select your server you would like to manage.
 - From the OVH Account Manager, Goto `Boot` and select `Modify`.
